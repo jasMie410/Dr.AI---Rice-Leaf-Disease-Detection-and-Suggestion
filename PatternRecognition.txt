@@ -1,0 +1,165 @@
+***NHẬN DẠNG***
+
+
+////
+*****WEEK1*****
+////
+
+1.Ôn lại chút OOP:
+- Class là cái chung chung (tập hợp các obj có chung thuộc tính) *vdu: class SinhVien
+- Obj là thể hiện cu thể của các class *vdu SinhVien a, sinhvien b
+
+2. Các lưu ý nhỏ
+- Với các mạng CNN, nhược điểm là model không quan tâm location của các partten *Vdu chỉ cần có mắt mũi miệng thi model sẽ cho là khuôn mặt, không quan taam vị trí của nó
+
+3. Nhận dạng mẫu
+- Mẫu là 
+- Trả lời câu hỏi: What is this???
+- Các bài toán thực tế: Nhận dạng biển số, nhận dạng chữ viết tay,...
+
+4. Các bước giair quyết bài toán PR
+a. Data Collection
+- Thu thập bằng gì?     *
+	*Sử dung các công cụ chuyeen dung, môi trường build mô hình như n thì thực tế tương tự*
+- Thu thập như thế nào? *
+- Bao nhiêu dữ liệu? *
+- Bao nhiêu là đủ? *Đủ khi đủ các trường hợp có thể xảy ra khi chạy thực tế
+- Tỉ lệ như nào? *
+- ...
+- Với việc thu thập data:
+	+ Dữ liệu cho training, eval, tuning, validation
+	+ Xem thử đã ai giải quyết vấn đề chưa
+	+ Chủ đề liên quan tới mảng nào (CV, NLP, sensor data,...)
+b. Tiền xử lí dữ lieu và rút trích đặc trưng
+- Xử lí dữ lieu, rút trích đặc trưng và chọn các đặc trưng tốt nhất
+
+c. Lựa chọn mô hình
+*Mục tiêu của ML: Với các mẫu X(x1, x2, ...), tìm ánh xạ sao cho y = f(x)
+	* nhưng không xảy ra TH (=) nên ta sẽ tìm một y' sao cho giá trị chênh lệch là nhỏ nhất (f ở đây là model)
+
+d. Phân loại
+- Dùng đặc trưng và mô hình đã huấn luyện và đưa ra dự đoán
+
+e. Post-processing
+- Hậu xử lí nếu cần (vdu trong bài toán ocr cần fix lỗi chính tả sau khi nhận dạng văn bản)
+
+5. hướng tiếp cận
+- Dựa vào thống kê học *bản chat là toán học
+- Dựa vào mạng neural nhân tạo *
+- Dựa vào cấu trúc *vdu chữ A là sự kết hợp của 2 đg thẳng và 1 đg ngang
+
+6. Reinforceement learning : học củng cố (trong các llm)	
+
+
+////
+*****WEEK2*****
+////
+
+
+- Khi nhận 1 bài toán,nếu chưa đủ mẫu thì phải thu thập them
+- Dựa vào dạng dữ liệu và phân chia bài toán thuộc dạng nào (classif, clustering,etc...)
+
+- Với 1 bài toán:
+ 	1. Định nghĩa bài toán
+	- Định nghĩa bài toán 
+	- Đưa ra các giả thuyết về bài toán (ví dụ: đã có data chưa, baseline: đã ai giải hay chưa, giải bằng pp nào)
+	- Đưa ra các bài toán tương tự giống bài toán đang giải
+	2. Trả lời tại sao phải giải quyết bài toán?
+	- Mô tả điều thúc đẩy, động lực để mình giải quyết bài toán
+	- Mô tả các lợi ích của giải pháp (model hoặc dự đoán)
+	- Mô tả xem giải pháp sẽ được áp dụng như thế nào
+	3. Bài toán có thể giải bằng cách thủ công (không sử dụng ML) hay không
+	- Mô tả xem bài toán được giai quyết hiện tại như nào
+	- Mô tả cách mà những dự đoán thủ công được đưa ra trước đây
+	- 
+**Lưu ý: Với bài toán đã có giải pháp cần lưu ý:
+	- Bài toán thuộc domain nào (CV, NLP, speech,..)
+	- Nếu đã có giải pháp rồi thì phải sử dụng baseline để so sánh xem giải pháp của mình hơn chỗ nào
+		*Không giải lại
+	- 
+============================================================================================================================
+
+
+
+
+/////
+*****DỮ LIỆU*****
+/////
+
+- Thu thập bằng gì?     *
+	*Sử dung các công cụ chuyeen dung, môi trường build mô hình như n thì thực tế tương tự*
+- Thu thập như thế nào? *
+- Bao nhiêu dữ liệu? *
+- Bao nhiêu là đủ? *Đủ khi đủ các trường hợp có thể xảy ra khi chạy thực tế
+- Tỉ lệ như nào? *
+- ...
+- Với việc thu thập data:
+	+ Dữ liệu cho training, eval, tuning, validation
+	+ Xem thử đã ai giải quyết vấn đề chưa
+	+ Chủ đề liên quan tới mảng nào (CV, NLP, sensor data,...)
+
+- Cần bao nhiêu dữ liệu???? --> Không biết
+	+ Phụ thuộc vào độ phức tạp của bài toán
+	+ Phụ thuộc vào thuật toán học mà ta sử dụng
+	+ Dựa vào lời khuyên của các chuyên gia (kinh nghiệm)
+	+ Dựa vào các đặc điểm như:
+		@ Số lượng classes
+		@ Số lượng đặc trưng đầu vào
+		@ Số lượng tham số
+		@...
+
+!!TRẢ LỜI 2 CÂU HỎI!!
+- Dữ liệu dùng để làm gì và như thế nào
+- Dữ liệu phải thu thập bao nhiêu
+
+****TIỀN XỬ LÍ DỮ LIỆU****
+
+1. Data engineering: " Data in the real word is dirty"
+	
+- Data extraction
+- Data cleaning
+- Data transformation *exp date, text,...
+- Data normalition: đưa về cùng 1 loại
+- Data integration: gộp data từ nhiều lưu trữ khác
+- Noise identification: xác định nhiễu
+
+
+1. Feature engineering
+EXP: Phân loại sinh viên có học tốt không
+- Sử dụng các thuộc tính liên quan tới sinh viên thì sẽ có quá nhiều thuộc tính (thường là từ 20-50) 
+	-> Sẽ khiến thời gian training lâu và dự đoán có độ chính xác thấp
+	--> Chọn vài đặc trưng có khả năng biểu diễn tập trung tốt hơn (chọn các đặc trưng quan trọng)
+		exp: có vay mượn học phí k, có đi học hay không,....
+
+
+- Feature extraction: rút trích đặc trưng
+- Feature selection: Lựa chọn đặc trưng
+	+ Có khả năng phân biệt và tổng quát hóa
+	+ Lựa chọn đặc trưng riêng biệt hoặc tập đặc trưng
+	+ Lựa chọn các đặc trưng bất biến với các phép biến đổi
+- Feature construction: xây dựng đặc trưng mới
+- Feature learning: xác định ft thông qua training
+
+
+
+
+
+
+/////
+*****SEMINAR*****
+/////
+
+- exam: có nhiều thuật toán --> cách khai thác tối đa các đặc trưng
+- combination - fusion: feature engineering --> dùng thuật toán nào để tối ưu việc chọn đặc trưng
+- evaluation: chọn độ đo nào, tiêu chuẩn nào --> modeling
+- Feature engineering: SEMINAR: trình bày một số thuật toán thường được sử dụng trong quá trình feature selection
+	+ aa
+	+ bb
+	+ cc
+
+
+/////
+Nội dung nhóm
+1. Đăng kí seminar
+2. Đăng kí đồ án
+/////
