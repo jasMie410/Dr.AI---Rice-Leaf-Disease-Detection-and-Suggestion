@@ -1,0 +1,33 @@
+# Môi trường ảo
+.venv/
+venv/   
+venv
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.idea/
+.vscode/
+
+# Biến môi trường và cấu hình bí mật
+.env
+*.env
+.gitconfig
+
+# File dependency nếu không cần theo dõi
+# requirements.txt
+
+# File hệ thống
+.DS_Store
+Thumbs.db
+
+# Log và build
+*.log
+*.egg-info/
+build/
+dist/
+
+
