@@ -16,7 +16,7 @@ Hướng dẫn cài đặt và chạy dự án **﻿Dr.AI - Rice Leaf Diseas Det
 
 ```bash
 git clone https://github.com/username/Dr.AI---Rice-Leaf-Disease-Detection-and-Suggestion.git
-cd plant-disease-detection
+cd Dr.AI---Rice-Leaf-Disease-Detection-and-Suggestion
 
 Step1: Build .venv
 Step2: .venv -> active
@@ -26,3 +26,4 @@ Step4: cd front-end -> npm install
 Linux : B5 make run
 
 Win: B5 python back-end/app.py -> cd front-end -> npm run dev
+
